@@ -35,4 +35,6 @@ jobs:
         make test-c-clean
         CC=clang-8 make test-c-src
     - name: Coveralls
-      uses: AndreMiras/coveralls-python-action@develop
+      uses: coverallsapp/github-action@master
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
